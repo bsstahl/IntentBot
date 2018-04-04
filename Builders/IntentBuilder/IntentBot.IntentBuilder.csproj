@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>IntentBot Team</Authors>
+    <Company>IntentBot</Company>
+    <Product>IntentBuilder</Product>
+    <PackageId>IntentBot.IntentBuilder</PackageId>
+    <RootNamespace>IntentBot</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IntentBot.Common" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>IntentBot</RootNamespace>
+    <Authors>IntentBot Team</Authors>
+    <Company>IntentBot</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IntentBot.Common" Version="1.0.0" />
+    <PackageReference Include="IntentBot.IntentBuilder" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
