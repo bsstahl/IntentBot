@@ -1,4 +1,4 @@
-# IntentBot - A microservices framwork for creating conversational bots
+# IntentBot - A microservices framework for creating conversational bots
 
 ## Phase 1
 
