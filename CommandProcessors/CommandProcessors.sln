@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.FakeCommandProcessor", "IntentBot.FakeCommandProcessor\IntentBot.FakeCommandProcessor\IntentBot.FakeCommandProcessor.csproj", "{FD821FD9-B4F3-4A2C-9117-C2116D53ED40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.FakeCommandProcessor", "IntentBot.FakeCommandProcessor\IntentBot.FakeCommandProcessor.csproj", "{FD821FD9-B4F3-4A2C-9117-C2116D53ED40}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.DefaultCommandProcessor", "IntentBot.DefaultCommandProcessor\IntentBot.DefaultCommandProcessor.csproj", "{A6224FB2-E263-484F-97B5-51D11E2941B5}"
 EndProject

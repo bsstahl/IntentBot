@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.HttpProxy", "IntentBot.HttpProxy\IntentBot.HttpProxy.csproj", "{F186C473-5F00-4385-8986-6C574D560D7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntentBot.HttpProxy.Test", "IntentBot.HttpProxy.Test\IntentBot.HttpProxy.Test.csproj", "{A4F37E5A-2148-4877-8324-FDA3675B121B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F186C473-5F00-4385-8986-6C574D560D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F186C473-5F00-4385-8986-6C574D560D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F186C473-5F00-4385-8986-6C574D560D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F186C473-5F00-4385-8986-6C574D560D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F37E5A-2148-4877-8324-FDA3675B121B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F37E5A-2148-4877-8324-FDA3675B121B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F37E5A-2148-4877-8324-FDA3675B121B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F37E5A-2148-4877-8324-FDA3675B121B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1E94358-7482-453E-943B-7798C059E6A9}
+	EndGlobalSection
+EndGlobal

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using IntentBot.Entities;
 using IntentBot.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,10 +16,10 @@ namespace IntentBot.FakeRouter
             _serviceProvider = serviceProvider;
         }
 
-        public CommandResponse RouteToHandler(UserRequest request)
+        public async Task<CommandResponse> RouteToHandlerAsync(UserRequest request)
         {
             var commandProcessor = _serviceProvider.GetService<ICommandProcessor>();
-            return commandProcessor.Process("FakeUri", request);
+            return await commandProcessor.ProcessAsync("FakeUri", request);
         }
     }
 }

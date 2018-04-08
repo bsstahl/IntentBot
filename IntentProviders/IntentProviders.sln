@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.FakeIntentProvider", "IntentBot.FakeIntentProvider\IntentBot.FakeIntentProvider.csproj", "{E32B04E4-4CD0-4268-9511-ED942012C76C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntentBot.LuisIntentProvider", "IntentBot.LuisIntentProvider\IntentBot.LuisIntentProvider.csproj", "{1B1BA74D-08BD-48B2-8734-C2BD36E1FFBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.LuisIntentProvider", "IntentBot.LuisIntentProvider\IntentBot.LuisIntentProvider.csproj", "{1B1BA74D-08BD-48B2-8734-C2BD36E1FFBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntentBot.LuisIntentProvider.Test", "IntentBot.LuisIntentProvider.Test\IntentBot.LuisIntentProvider.Test.csproj", "{47276342-E21D-441C-B9B1-25F13FAA1C7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.LuisIntentProvider.Test", "IntentBot.LuisIntentProvider.Test\IntentBot.LuisIntentProvider.Test.csproj", "{47276342-E21D-441C-B9B1-25F13FAA1C7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

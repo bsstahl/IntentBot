@@ -22,6 +22,7 @@ namespace IntentBot.Orchestrator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
             services.AddFakeRouter();
             services.AddFakeIntentProvider();
             services.AddFakeCommandProcessing();

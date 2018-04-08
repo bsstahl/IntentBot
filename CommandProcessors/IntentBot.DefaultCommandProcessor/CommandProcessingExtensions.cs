@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using IntentBot.DefaultCommandProcessor;
 using IntentBot.Interfaces;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -16,6 +17,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <param name="servicesCollection"></param>
         public static void AddDefaultCommandProcessing(this IServiceCollection servicesCollection)
         {
+            servicesCollection.AddScoped<IHttpProxy>(c => new IntentBot.HttpProxy.Client());
             servicesCollection.AddScoped<ICommandProcessor>(c => new IntentBot.DefaultCommandProcessor.Processor(c));
         }
     }

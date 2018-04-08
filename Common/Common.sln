@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.Common", "IntentBot.Common\IntentBot.Common.csproj", "{22B58FFF-340A-401F-9B12-C4A21019322A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntentBuilder", "IntentBuilder", "{1CAF67EB-650D-47CF-891C-D5E4CC5F7A0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.IntentBuilder.Test", "..\Builders\IntentBot.IntentBuilder.Test\IntentBot.IntentBuilder.Test.csproj", "{11E46A60-FEDE-4134-9845-D92E67FD26C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.RouteCollectionBuilder", "..\Builders\IntentBot.RouteCollectionBuilder\IntentBot.RouteCollectionBuilder.csproj", "{DA283021-1D7F-4873-A3A4-EF4A07D85B2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RouteCollectionBuilder", "RouteCollectionBuilder", "{30A6266D-2AC5-4D23-8AC3-E41421A958C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.RouteCollectionBuilder.Test", "..\Builders\IntentBot.RouteCollectionBuilder.Test\IntentBot.RouteCollectionBuilder.Test.csproj", "{5725D3BF-9344-4184-B0DB-27931F897073}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserRequestBuilder", "UserRequestBuilder", "{75F76BAB-785E-4829-A01B-4F937CC584BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.UserRequestBuilder.Test", "..\Builders\IntentBot.UserRequestBuilder.Test\IntentBot.UserRequestBuilder.Test.csproj", "{20AE7918-D355-4D14-B6C5-B157B7E2FB56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntentEntityValuesBuilder", "IntentEntityValuesBuilder", "{C2EDBD06-9A18-4B2A-ACD5-EAA83D71F4BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.IntentEntityValuesBuilder", "..\Builders\IntentBot.IntentEntityValuesBuilder\IntentBot.IntentEntityValuesBuilder.csproj", "{6D47446D-B175-42AC-8397-D2CA50A21D19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.IntentEntityValuesBuilder.Test", "..\Builders\IntentBot.IntentEntityValuesBuilder.Test\IntentBot.IntentEntityValuesBuilder.Test.csproj", "{2B399DDA-A1A2-41E0-8413-39E65328F1F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.IntentBuilder", "..\Builders\IntentBot.IntentBuilder\IntentBot.IntentBuilder.csproj", "{F9D201EF-9C30-4FF4-9CFD-9776F5395932}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.UserRequestBuilder", "..\Builders\IntentBot.UserRequestBuilder\IntentBot.UserRequestBuilder.csproj", "{367572DB-92BA-4336-A7AF-1987403B3FE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22B58FFF-340A-401F-9B12-C4A21019322A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B58FFF-340A-401F-9B12-C4A21019322A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B58FFF-340A-401F-9B12-C4A21019322A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B58FFF-340A-401F-9B12-C4A21019322A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E46A60-FEDE-4134-9845-D92E67FD26C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E46A60-FEDE-4134-9845-D92E67FD26C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E46A60-FEDE-4134-9845-D92E67FD26C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E46A60-FEDE-4134-9845-D92E67FD26C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA283021-1D7F-4873-A3A4-EF4A07D85B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA283021-1D7F-4873-A3A4-EF4A07D85B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA283021-1D7F-4873-A3A4-EF4A07D85B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA283021-1D7F-4873-A3A4-EF4A07D85B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5725D3BF-9344-4184-B0DB-27931F897073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5725D3BF-9344-4184-B0DB-27931F897073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5725D3BF-9344-4184-B0DB-27931F897073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5725D3BF-9344-4184-B0DB-27931F897073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AE7918-D355-4D14-B6C5-B157B7E2FB56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AE7918-D355-4D14-B6C5-B157B7E2FB56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AE7918-D355-4D14-B6C5-B157B7E2FB56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AE7918-D355-4D14-B6C5-B157B7E2FB56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D47446D-B175-42AC-8397-D2CA50A21D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D47446D-B175-42AC-8397-D2CA50A21D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D47446D-B175-42AC-8397-D2CA50A21D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D47446D-B175-42AC-8397-D2CA50A21D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B399DDA-A1A2-41E0-8413-39E65328F1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B399DDA-A1A2-41E0-8413-39E65328F1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B399DDA-A1A2-41E0-8413-39E65328F1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B399DDA-A1A2-41E0-8413-39E65328F1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D201EF-9C30-4FF4-9CFD-9776F5395932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D201EF-9C30-4FF4-9CFD-9776F5395932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D201EF-9C30-4FF4-9CFD-9776F5395932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D201EF-9C30-4FF4-9CFD-9776F5395932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{367572DB-92BA-4336-A7AF-1987403B3FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{367572DB-92BA-4336-A7AF-1987403B3FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{367572DB-92BA-4336-A7AF-1987403B3FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{367572DB-92BA-4336-A7AF-1987403B3FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{11E46A60-FEDE-4134-9845-D92E67FD26C9} = {1CAF67EB-650D-47CF-891C-D5E4CC5F7A0C}
+		{DA283021-1D7F-4873-A3A4-EF4A07D85B2C} = {30A6266D-2AC5-4D23-8AC3-E41421A958C7}
+		{5725D3BF-9344-4184-B0DB-27931F897073} = {30A6266D-2AC5-4D23-8AC3-E41421A958C7}
+		{20AE7918-D355-4D14-B6C5-B157B7E2FB56} = {75F76BAB-785E-4829-A01B-4F937CC584BF}
+		{6D47446D-B175-42AC-8397-D2CA50A21D19} = {C2EDBD06-9A18-4B2A-ACD5-EAA83D71F4BC}
+		{2B399DDA-A1A2-41E0-8413-39E65328F1F2} = {C2EDBD06-9A18-4B2A-ACD5-EAA83D71F4BC}
+		{F9D201EF-9C30-4FF4-9CFD-9776F5395932} = {1CAF67EB-650D-47CF-891C-D5E4CC5F7A0C}
+		{367572DB-92BA-4336-A7AF-1987403B3FE3} = {75F76BAB-785E-4829-A01B-4F937CC584BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9498213D-56A8-4B38-8D52-1BCC31A79966}
+	EndGlobalSection
+EndGlobal

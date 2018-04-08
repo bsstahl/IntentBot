@@ -1,5 +1,6 @@
 using IntentBot.Entities;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using TestHelperExtensions;
 using Xunit;
@@ -66,6 +67,28 @@ namespace IntentBot.Test
         }
 
         [Fact]
+        public void ReturnAnIntentWithALead()
+        {
+            double expected = (1.0).GetRandom();
+            var target = new IntentBuilder();
+            var actual = target.AddLead(expected).Build();
+            Assert.Equal(expected, actual.Lead);
+        }
+
+        [Fact]
+        public void ReturnAnIntentWithAScoreAndLead()
+        {
+            double expectedScore = (1.0).GetRandom();
+            double secondBestScore = (1.0).GetRandom();
+            double expectedLead = expectedScore - secondBestScore;
+
+            var target = new IntentBuilder();
+            var actual = target.AddScore(expectedScore, secondBestScore).Build();
+            Assert.Equal(expectedScore, actual.Score);
+            Assert.Equal(expectedLead, actual.Lead);
+        }
+
+        [Fact]
         public void ReturnAnIntentWithAnEntity()
         {
             string expectedName = string.Empty.GetRandom();
@@ -79,6 +102,45 @@ namespace IntentBot.Test
             var actualEntity = actual.IntentEntities.Single();
             Assert.Equal(expectedName, actualEntity.Name);
             Assert.Equal(expectedType, actualEntity.Type);
+        }
+
+        [Fact]
+        public void ReturnAnIntentWithAnEntityThatHasAEmptyValuesCollection()
+        {
+            string expectedName = string.Empty.GetRandom();
+            string expectedType = string.Empty.GetRandom();
+
+            var target = new IntentBuilder();
+            var actual = target
+                .AddEntity(expectedName, expectedType)
+                .Build();
+
+            var actualEntity = actual.IntentEntities.Single();
+            Assert.False(actualEntity.Values.Any());
+        }
+
+        [Fact]
+        public void ReturnAnIntentWithAnEntityThatHasASingleValueInTheValuesCollection()
+        {
+            string expectedName = string.Empty.GetRandom();
+            string expectedType = string.Empty.GetRandom();
+
+            string expectedPattern = string.Empty.GetRandom();
+            string expectedValue = string.Empty.GetRandom();
+            string expectedValueType = string.Empty.GetRandom();
+
+            var expectedValues = new IntentEntityValuesBuilder()
+                .Add(expectedValueType, expectedValue, expectedPattern)
+                .Build();
+
+            var target = new IntentBuilder();
+            var actual = target
+                .AddEntity(expectedName, expectedType, expectedValues)
+                .Build();
+
+            var actualEntity = actual.IntentEntities.Single();
+            var actualValue = actualEntity.Values.Single();
+            Assert.Equal(expectedValue, actualValue.Value);
         }
 
         [Fact]

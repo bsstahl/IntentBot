@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using IntentBot.Entities;
 using IntentBot.Interfaces;
+using System.Threading.Tasks;
 
 namespace IntentBot.SoftRouter
 {
@@ -21,7 +22,7 @@ namespace IntentBot.SoftRouter
             _routes = routes;
         }
 
-        public CommandResponse RouteToHandler(UserRequest request)
+        public async Task<CommandResponse> RouteToHandlerAsync(UserRequest request)
         {
             string uri;
             if (_routes.Any(r => r.IntentName == request.Intent.Name))
@@ -32,7 +33,7 @@ namespace IntentBot.SoftRouter
                 throw new Exceptions.MissingRouteException(_defaultIntentName);
 
             var handler = _serviceProvider.GetService<ICommandProcessor>();
-            var response = handler.Process(uri, request);
+            var response = await handler.ProcessAsync(uri, request);
 
             return response;
         }

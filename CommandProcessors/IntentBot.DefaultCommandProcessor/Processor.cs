@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using IntentBot.Entities;
 using IntentBot.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace IntentBot.DefaultCommandProcessor
 {
@@ -26,10 +29,20 @@ namespace IntentBot.DefaultCommandProcessor
         /// <param name="uri">The URI to be used to process the request</param>
         /// <param name="request">The user request to be processed</param>
         /// <returns>An IntentBot.Entities.CommandResponse object representing the result of the processing</returns>
-        public CommandResponse Process(string uri, UserRequest request)
+        public async Task<CommandResponse> ProcessAsync(string uri, UserRequest request)
         {
-            // TODO: Implement
-            throw new NotImplementedException();
+            var restProxy = _serviceProvider.GetService<IHttpProxy>();
+
+            var requestContent = request.AsHttpContent();
+            Console.WriteLine($"Issuing call to Command Processor '{uri}'");
+            HttpResponseMessage response = await restProxy.PostAsync(uri, requestContent);
+            if (response.IsSuccessStatusCode)
+                Console.WriteLine("Response returned successfully from Command Processor");
+            else
+                throw new Exceptions.DataSourceException("Request to Command Processor failed", null); // TODO: Add data to exception
+
+            return await response.AsCommandResponse();
         }
+
     }
 }

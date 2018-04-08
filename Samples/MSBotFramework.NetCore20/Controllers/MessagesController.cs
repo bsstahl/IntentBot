@@ -34,15 +34,22 @@ namespace IntentBot.Orchestrator
             var reply = activity.CreateReply();
             if (activity.Type == ActivityTypes.Message)
             {
-                // TODO: Make the call to Intent Provider async
-                // TODO: Make the call to Intent Router async
+                Console.WriteLine($"Calling intent provider '{intentProvider.GetType().FullName}' with '{activity.Text}'");
+                var intent = await intentProvider.GetIntentAsync(activity.Text);
+                Console.WriteLine($"Intent provider returned '{intent.Name}'");
 
-                var intent = intentProvider.GetIntent(activity.Text);
+                // TODO: Add real user data to request
+                // TODO: Add real source data to request
+                var request = new IntentBot.UserRequestBuilder()
+                    .AddIntent(intent)
+                    .AddUser("FakeUserId", "PHX")
+                    .AddSource("FakeRequestSource")
+                    .Build();
 
-                // TODO: Add user data to request
-                // TODO: Add source data to request
-                var request = new IntentBot.UserRequestBuilder().AddIntent(intent).Build();
-                var routingResult = intentRouter.RouteToHandler(request);
+                Console.WriteLine($"Routing request to '{intentRouter.GetType().FullName}'");
+                var routingResult = await intentRouter.RouteToHandlerAsync(request);
+                Console.WriteLine($"Service returned '{routingResult.ResponseText}'");
+
                 reply.Text = routingResult.ResponseText;
             }
             else
