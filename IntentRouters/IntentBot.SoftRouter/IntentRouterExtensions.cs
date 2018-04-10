@@ -10,7 +10,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static void AddSoftRouter(this IServiceCollection servicesCollection, IEnumerable<IntentRoute> routes)
         {
-            servicesCollection.AddScoped<IIntentRouter>(c => new IntentBot.SoftRouter.Engine(c, routes));
+            servicesCollection.AddScoped<IIntentHandler>(c => new IntentBot.SoftRouter.Engine(c, routes));
         }
     }
 }

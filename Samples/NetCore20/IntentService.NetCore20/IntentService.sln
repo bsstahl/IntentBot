@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentService", "IntentService.csproj", "{0D5ECB18-3626-4435-8D3C-7A712D7D271A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntentService.EchoIntentHandler", "..\IntentService.EchoIntentHandler\IntentService.EchoIntentHandler.csproj", "{75E715DE-402A-4CC9-B5B3-ED5EF75A86C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D5ECB18-3626-4435-8D3C-7A712D7D271A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5ECB18-3626-4435-8D3C-7A712D7D271A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5ECB18-3626-4435-8D3C-7A712D7D271A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5ECB18-3626-4435-8D3C-7A712D7D271A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E715DE-402A-4CC9-B5B3-ED5EF75A86C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E715DE-402A-4CC9-B5B3-ED5EF75A86C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E715DE-402A-4CC9-B5B3-ED5EF75A86C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E715DE-402A-4CC9-B5B3-ED5EF75A86C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5730D623-10BE-47E9-9162-26C9F1CD3C69}
+	EndGlobalSection
+EndGlobal

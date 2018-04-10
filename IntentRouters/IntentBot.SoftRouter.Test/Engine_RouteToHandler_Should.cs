@@ -29,7 +29,7 @@ namespace IntentBot.SoftRouter.Test
             var request = new UserRequestBuilder().Random().AddIntent(intent).Build();
 
             var target = new SoftRouter.Engine(serviceProvider, routes);
-            var actual = await target.RouteToHandlerAsync(request);
+            var actual = await target.HandleRequestAsync(request);
 
             cmdProcessor.Verify(p => p.ProcessAsync(routeUri, It.IsAny<UserRequest>()), Times.Once);
         }
@@ -53,7 +53,7 @@ namespace IntentBot.SoftRouter.Test
 
             var request = new UserRequestBuilder().Random().Build();
             var target = new SoftRouter.Engine(serviceProvider, routes);
-            var actual = await target.RouteToHandlerAsync(request);
+            var actual = await target.HandleRequestAsync(request);
 
             cmdProcessor.Verify(p => p.ProcessAsync(defaultRouteUri, It.IsAny<UserRequest>()), Times.Once);
         }

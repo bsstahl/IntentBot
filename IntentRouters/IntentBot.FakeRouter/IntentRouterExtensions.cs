@@ -9,7 +9,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static void AddFakeRouter(this IServiceCollection servicesCollection)
         {
-            servicesCollection.AddScoped<IIntentRouter>(c => new IntentBot.FakeRouter.Engine(c));
+            servicesCollection.AddScoped<IIntentHandler>(c => new IntentBot.FakeRouter.Engine(c));
         }
     }
 }

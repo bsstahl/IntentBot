@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IntentBot.Common" Version="1.3.1" />
-    <PackageReference Include="IntentBot.DefaultCommandProcessor" Version="1.1.0" />
+    <PackageReference Include="IntentBot.Common" Version="1.4.1" />
+    <PackageReference Include="IntentBot.DefaultCommandProcessor" Version="1.1.2" />
     <PackageReference Include="IntentBot.FakeCommandProcessor" Version="1.1.0" />
-    <PackageReference Include="IntentBot.FakeIntentProvider" Version="1.1.0" />
-    <PackageReference Include="IntentBot.FakeRouter" Version="1.0.0" />
-    <PackageReference Include="IntentBot.LuisIntentProvider" Version="1.1.0" />
+    <PackageReference Include="IntentBot.FakeIntentProvider" Version="1.2.0" />
+    <PackageReference Include="IntentBot.FakeRouter" Version="1.2.0" />
+    <PackageReference Include="IntentBot.LuisIntentProvider" Version="1.2.0" />
     <PackageReference Include="IntentBot.RouteCollectionBuilder" Version="1.0.0" />
-    <PackageReference Include="IntentBot.SoftRouter" Version="1.0.0" />
+    <PackageReference Include="IntentBot.SoftRouter" Version="1.2.0" />
     <PackageReference Include="IntentBot.UserRequestBuilder" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
     <PackageReference Include="Microsoft.Bot.Connector" Version="3.14.1.1" />

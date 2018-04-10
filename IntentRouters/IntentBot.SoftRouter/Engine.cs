@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace IntentBot.SoftRouter
 {
     [Serializable]
-    public class Engine : IIntentRouter
+    public class Engine : IIntentHandler
     {
         const string _defaultIntentName = "default";
 
@@ -22,7 +22,7 @@ namespace IntentBot.SoftRouter
             _routes = routes;
         }
 
-        public async Task<CommandResponse> RouteToHandlerAsync(UserRequest request)
+        public async Task<CommandResponse> HandleRequestAsync(UserRequest request)
         {
             string uri;
             if (_routes.Any(r => r.IntentName == request.Intent.Name))

@@ -9,16 +9,16 @@ namespace IntentBot.Interfaces
     /// <summary>
     /// Routes user intents to the appropriate intent processor.
     /// </summary>
-    public interface IIntentRouter
+    public interface IIntentHandler
     {
         /// <summary>
-        /// Selects the appropriate ICommandProcessor for the Intent. Routes the
-        /// request to that processor and returns the results from that processor.
+        /// Process the selected UserRequest via an implementation of an Intent handler. 
+        /// This may be handled by routing to the appropriate handler and returning the
+        /// results, or by handling the request directly.
         /// </summary>
         /// <param name="request">The request to be processed by the handler as received by the IntentBot.</param>
         /// with intent determined by the Intent Provider
-        /// <returns>A Task of type CommandResponse that holds the response provided by 
-        /// the handler to which the request was routed</returns>
-        Task<CommandResponse> RouteToHandlerAsync(UserRequest request);
+        /// <returns>A Task of type CommandResponse that holds the response provided by the handler</returns>
+        Task<CommandResponse> HandleRequestAsync(UserRequest request);
     }
 }

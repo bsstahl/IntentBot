@@ -2,14 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>IntentBot</RootNamespace>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>IntentBot Team</Authors>
-    <Company>IntentBot</Company>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="IntentBot.Common" Version="1.5.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
   </ItemGroup>
 
 </Project>
