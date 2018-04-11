@@ -26,7 +26,7 @@ namespace IntentService
             services.AddMvc();
 
             // TODO: Add the appropriate service to the container
-            services.AddEchoHandler();
+            services.AddHandler();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

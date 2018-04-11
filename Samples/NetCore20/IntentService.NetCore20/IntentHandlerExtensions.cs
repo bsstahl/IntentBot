@@ -8,9 +8,9 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class IntentHandlerExtensions
     {
-        public static void AddEchoHandler(this IServiceCollection servicesCollection)
+        public static void AddHandler(this IServiceCollection servicesCollection)
         {
-            servicesCollection.AddScoped<IIntentHandler>(c => new IntentService.EchoIntentHandler.Handler(c));
+            servicesCollection.AddScoped<IIntentHandler>(c => new IntentService.IntentHandler.Handler(c));
         }
 
     }

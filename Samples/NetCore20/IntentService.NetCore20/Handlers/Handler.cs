@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using IntentBot.Entities;
 
-namespace IntentService.EchoIntentHandler
+namespace IntentService.IntentHandler
 {
     public class Handler : IntentBot.Interfaces.IIntentHandler
     {
