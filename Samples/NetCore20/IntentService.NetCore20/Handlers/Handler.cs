@@ -13,17 +13,21 @@ namespace IntentService.IntentHandler
             _serviceProvider = serviceProvider;
         }
 
-        public async Task<CommandResponse> HandleRequestAsync(UserRequest request)
+        Task<CommandResponse> IntentBot.Interfaces.IIntentHandler.HandleRequestAsync(UserRequest request)
         {
-            await Task.Yield();
-            return new CommandResponse()
+            // TODO: Handle request appropriately
+            return Task.Run(() =>
             {
-                RequiresUserConfirmation = false,
-                UriResponse = string.Empty,
-                ResultStatus = Status.Success,
-                ResponseText = request.Intent.Utterance
-            };
+                return new CommandResponse()
+                {
+                    RequiresUserConfirmation = false,
+                    UriResponse = string.Empty,
+                    ResultStatus = Status.Success,
+                    ResponseText = request.Intent.Utterance
+                };
+            });
         }
-
     }
+
 }
+
