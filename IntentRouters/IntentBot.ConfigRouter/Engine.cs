@@ -22,6 +22,7 @@ namespace IntentBot.ConfigRouter
             _serviceProvider = serviceProvider;
             var config = _serviceProvider.GetService<IConfiguration>();
             _routes = config.GetSection(routeConfigKey).AsIntentRouteCollection();
+            _routes.LogEntries();
             if (!_routes.Contains(_defaultIntentName))
                 throw new Exceptions.MissingRouteException(_defaultIntentName);
         }

@@ -18,5 +18,11 @@ namespace IntentBot.ConfigRouter
             return routes.Single(r => r.IntentName == routeName);
         }
 
+        public static void LogEntries(this IEnumerable<IntentRoute> routes)
+        {
+            foreach (var route in routes)
+                Console.WriteLine($"Intent '{route.IntentName}' routes to '{route.Uri}'.");
+        }
+
     }
 }
