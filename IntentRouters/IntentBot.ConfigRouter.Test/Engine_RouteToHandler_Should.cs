@@ -9,6 +9,7 @@ using Autofac.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using IntentBot.Exceptions;
+using System.Collections.Generic;
 
 namespace IntentBot.ConfigRouter.Test
 {
@@ -69,10 +70,10 @@ namespace IntentBot.ConfigRouter.Test
             var cmdProcessor = new Mock<ICommandProcessor>(MockBehavior.Loose);
 
             var routes = new RouteCollectionBuilder(string.Empty.GetRandom())
-                .Add(intentName, routeUri)
-                .Build()
-                .AsKeyValuePairs("intentRoutes");
-            var config = new ConfigurationBuilder().AddInMemoryCollection(routes).Build();
+                .Add(intentName, routeUri).Build().AsJsonString();
+            var routeCollection = new List<KeyValuePair<string, string>>()
+                { new KeyValuePair<string, string>("intentRoutes", routes) };
+            var config = new ConfigurationBuilder().AddInMemoryCollection(routeCollection).Build();
 
             var containerBuilder = new Autofac.ContainerBuilder();
             containerBuilder.RegisterInstance<ICommandProcessor>(cmdProcessor.Object);
@@ -99,8 +100,10 @@ namespace IntentBot.ConfigRouter.Test
                 .Add(string.Empty.GetRandom(), string.Empty.GetRandom())
                 .Add(string.Empty.GetRandom(), string.Empty.GetRandom())
                 .Add(string.Empty.GetRandom(), string.Empty.GetRandom())
-                .Build().AsKeyValuePairs("intentRoutes");
-            var config = new ConfigurationBuilder().AddInMemoryCollection(routes).Build();
+                .Build().AsJsonString();
+            var routeCollection = new List<KeyValuePair<string, string>>()
+                { new KeyValuePair<string, string>("intentRoutes", routes) };
+            var config = new ConfigurationBuilder().AddInMemoryCollection(routeCollection).Build();
 
             var containerBuilder = new Autofac.ContainerBuilder();
             containerBuilder.RegisterInstance<ICommandProcessor>(cmdProcessor.Object);

@@ -1,7 +1,3 @@
 ﻿{
-  "intentRoutes": [
-    { "abcdefg": "http://www.abcdefg.com" },
-    { "hijklmnop": "http://www.hijklmnop.com" },
-    { "qrstuvw": "http://www.qrstuvw.com" }
-  ]
+  "intentRoutes": "[{\"abcdefg\":\"http://www.abcdefg.com\"},{\"hijklmnop\":\"http://www.hijklmnop.com\"},{\"qrstuvw\": \"http://www.qrstuvw.com/\" }]"
 }
