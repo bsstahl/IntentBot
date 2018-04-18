@@ -1,0 +1,6 @@
+﻿{
+  "intentRoutes": [
+    { "default": "abcdefg" },
+    { "hijklmnop": "http://www.hijklmnop.com" }
+  ]
+}
