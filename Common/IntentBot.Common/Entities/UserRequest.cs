@@ -23,7 +23,9 @@ namespace IntentBot.Entities
         public Intent Intent { get; set; }
 
         /// <summary>
-        /// Represents the source of the request. May be Siri, Slack, SMS, etc.
+        /// Represents the data provided by source of the request. This data may come
+        /// from Siri, Slack, SMS, etc. and may contain additional information
+        /// about the request
         /// </summary>
         public string Source { get; set; }
 

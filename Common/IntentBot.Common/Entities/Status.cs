@@ -16,9 +16,15 @@ namespace IntentBot.Entities
         Success,
 
         /// <summary>
-        /// This processor does not understand this particular request
+        /// This processor does not understand this particular request or
+        /// required information is missing
         /// </summary>
-        RequestNotUnderstood
+        RequestNotUnderstood,
+
+        /// <summary>
+        /// Indicates that the user specified in the request could not be located
+        /// </summary>
+        UserNotFound
 
         // TODO: Add additional statuses as necessary
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Xunit;
 using TestHelperExtensions;
+using System.Linq;
 
 namespace IntentBot.Test
 {
@@ -37,57 +38,22 @@ namespace IntentBot.Test
         }
 
         [Fact]
-        public void ReturnAUserRequestWithTheSpecifiedUserId()
-        {
-            string expectedId = string.Empty.GetRandom();
-            string expectedBase = string.Empty.GetRandom(3);
-
-            var user = new Entities.User() { Id = expectedId, BaseCode = expectedBase };
-            var actual = new UserRequestBuilder().AddUser(user).Build();
-
-            Assert.Equal(expectedId, actual.User.Id);
-        }
-
-        [Fact]
-        public void ReturnAUserRequestWithTheSpecifiedUserBaseCode()
-        {
-            string expectedId = string.Empty.GetRandom();
-            string expectedBase = string.Empty.GetRandom(3);
-
-            var user = new Entities.User() { Id = expectedId, BaseCode = expectedBase };
-            var actual = new UserRequestBuilder().AddUser(user).Build();
-
-            Assert.Equal(expectedBase, actual.User.BaseCode);
-        }
-
-        [Fact]
-        public void ReturnAUserRequestWithTheSpecifiedUserIdIfElementsAreAddedIndividually()
-        {
-            string expectedId = string.Empty.GetRandom();
-            string expectedBase = string.Empty.GetRandom(3);
-
-            var actual = new UserRequestBuilder().AddUser(expectedId, expectedBase).Build();
-
-            Assert.Equal(expectedId, actual.User.Id);
-        }
-
-        [Fact]
-        public void ReturnAUserRequestWithTheSpecifiedUserBaseCodeIfElementsAreAddedIndividually()
-        {
-            string expectedId = string.Empty.GetRandom();
-            string expectedBase = string.Empty.GetRandom(3);
-
-            var actual = new UserRequestBuilder().AddUser(expectedId, expectedBase).Build();
-
-            Assert.Equal(expectedBase, actual.User.BaseCode);
-        }
-
-        [Fact]
         public void ReturnAUserRequestWithTheSpecifiedDateTime()
         {
             DateTime expected = DateTime.MaxValue.GetRandom().ToMinutePrecision();
             var actual = new UserRequestBuilder().AddRequestUtcDateTime(expected).Build();
             Assert.Equal(expected, actual.RequestDateTimeUtc);
+        }
+
+        [Fact]
+        public void ReturnAUserRequestWithTheSpecifiedUser()
+        {
+            var expected = (new UserBuilder().Random().Build());
+            var actual = new UserRequestBuilder().AddUser(expected).Build();
+            Assert.Equal(expected.Id, actual.User.Id);
+            Assert.Equal(expected.FirstName, actual.User.FirstName);
+            Assert.Equal(expected.LastName, actual.User.LastName);
+            Assert.Equal(expected.AdditionalData.Count(), actual.User.AdditionalData.Count());
         }
 
         [Fact]

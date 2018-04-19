@@ -10,15 +10,24 @@ namespace IntentBot.Entities
     public class User
     {
         /// <summary>
-        /// The AAID of the user
+        /// The UserID of the user if known. Empty if unknown.
         /// </summary>
         public string Id { get; set; }
 
         /// <summary>
-        /// The 3-letter IATA station code of the user's base
+        /// The first name of the authenticated user if known. Empty if unknown.
         /// </summary>
-        public string BaseCode { get; set; }
+        public string FirstName { get; set; }
 
-        // TODO: Add additional information from the Authentication Provider response
+        /// <summary>
+        /// The last name of the authenticated user if known. Empty if unknown.
+        /// </summary>
+        public string LastName { get; set; }
+
+        /// <summary>
+        /// A collection of additional user data stored in key-value pairs
+        /// </summary>
+        /// <example>Key: homecity, Value: Phoenix</example>
+        public IEnumerable<KeyValuePair<string, string>> AdditionalData { get; set; }
     }
 }

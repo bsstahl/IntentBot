@@ -33,11 +33,6 @@ namespace IntentBot
             return this;
         }
 
-        public UserRequestBuilder AddUser(string userId, string userBaseCode)
-        {
-            return this.AddUser(new User() { Id = userId, BaseCode = userBaseCode });
-        }
-
         public UserRequestBuilder AddRequestUtcDateTime(DateTime requestDateTimeUtc)
         {
             this.RequestDateTimeUtc = requestDateTimeUtc;
@@ -46,7 +41,7 @@ namespace IntentBot
 
         public UserRequestBuilder Random()
         {
-            this.AddUser("TestUser", "PHX");
+            this.AddUser((new UserBuilder().Random().Build()));
             this.AddSource("UserRequestBuilder");
             this.AddIntent(new IntentBuilder().Random().Build());
             return this;

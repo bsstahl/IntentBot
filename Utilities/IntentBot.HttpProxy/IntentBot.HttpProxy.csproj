@@ -6,7 +6,7 @@
     <Authors>IntentBot Team</Authors>
     <Company>IntentBot</Company>
     <Product>IntentBot.HttpProxy</Product>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IntentBot.Common" Version="1.5.0" />
+    <PackageReference Include="IntentBot.Common" Version="1.6.0" />
   </ItemGroup>
 
 </Project>
