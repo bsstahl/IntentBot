@@ -10,7 +10,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static void AddHandler(this IServiceCollection servicesCollection)
         {
-            servicesCollection.AddScoped<IIntentHandler>(c => new IntentService.IntentHandler.Handler(c));
+            servicesCollection.AddScoped<IIntentHandler>(c => new IntentService.Handlers.Handler(c));
         }
 
     }
