@@ -21,7 +21,9 @@ namespace IntentService.Handlers
                 return new CommandResponse()
                 {
                     RequiresUserConfirmation = false,
+                    IsAdditionalInformationAvailable = false,
                     UriResponse = string.Empty,
+                    PhoneNumberResponse = string.Empty,
                     ResultStatus = Status.Success,
                     ResponseText = request.Intent.Utterance
                 };

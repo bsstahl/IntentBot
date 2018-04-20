@@ -25,7 +25,7 @@ namespace IntentService
         {
             services.AddMvc();
 
-            // TODO: Add the appropriate service to the container
+            // TODO: Add any additional dependencies to the container
             services.AddHandler();
         }
 
