@@ -1,0 +1,38 @@
+digraph IntentBot {
+
+  "IntentBot.HttpProxy" -> "IntentBot.Common"
+
+  "IntentBot.SoftRouter" -> "IntentBot.HttpProxy"
+  "IntentBot.SoftRouter" -> "IntentBot.Common"
+  
+  "IntentBot.ConfigRouter" -> "IntentBot.Common"
+  "IntentBot.ConfigRouter" -> "IntentBot.DefaultCommandProcessor"
+  
+  "IntentBot.FakeRouter" -> "IntentBot.Common"
+  
+  "IntentBot.FakeIntentProvider" -> "IntentBot.Common"
+  "IntentBot.FakeIntentProvider" -> "IntentBot.IntentBuilder"
+  "IntentBot.FakeIntentProvider" -> "IntentBot.IntentEntityValuesBuilder"
+  
+  "IntentBot.FakeCommandProcessor" -> "IntentBot.Common"
+  
+  "IntentBot.DefaultCommandProcessor" -> "IntentBot.Common"
+  "IntentBot.DefaultCommandProcessor" -> "IntentBot.HttpProxy"
+
+  "IntentBot.UserIntentBuilder" -> "IntentBot.Common"
+  "IntentBot.UserIntentBuilder" -> "IntentBot.IntentBuilder"
+  "IntentBot.UserIntentBuilder" -> "IntentBot.UserBuilder"
+  
+  "IntentBot.UserBuilder" -> "IntentBot.Common"
+
+  "IntentBot.RouteCollectionBuilder" -> "IntentBot.Common"
+  
+  "IntentBot.IntentEntityValuesBuilder" -> "IntentBot.Common"
+  
+  "IntentBot.IntentBuilder" -> "IntentBot.Common"
+  
+  "IntentBot.UserRequestBuilder" -> "IntentBot.Common"
+  "IntentBot.UserRequestBuilder" -> "IntentBot.IntentBuilder"
+  "IntentBot.UserRequestBuilder" -> "IntentBot.UserBuilder"
+  
+}

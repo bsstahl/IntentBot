@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2231.11 260" width="2231pt" height="260pt" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph1" transform="scale(1) rotate(0) translate(4 256)">
+<title>IntentBot</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-256 2228.11,-256 2228.11,5 -4,5" />
+<!-- IntentBot.HttpProxy -->
+<g class="node" id="node1"><title>IntentBot.HttpProxy</title>
+<ellipse fill="none" stroke="black" cx="359" cy="-90" rx="90.247" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="359" y="-85.8">IntentBot.HttpProxy</text>
+</g>
+<!-- IntentBot.Common -->
+<g class="node" id="node3"><title>IntentBot.Common</title>
+<ellipse fill="none" stroke="black" cx="1112" cy="-18" rx="85.319" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="1112" y="-13.8">IntentBot.Common</text>
+</g>
+<!-- IntentBot.HttpProxy&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge2"><title>IntentBot.HttpProxy-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 428.13 -78.4268 C 444.459 -76.1228 461.825 -73.8299 478 -72 C 671.088 -50.1562 898.21 -33.3049 1021.4 -24.9005" />
+<polygon fill="black" stroke="black" points="1021.8,-28.3815 1031.54,-24.2118 1021.32,-21.3976 1021.8,-28.3815" />
+</g>
+<!-- IntentBot.SoftRouter -->
+<g class="node" id="node4"><title>IntentBot.SoftRouter</title>
+<ellipse fill="none" stroke="black" cx="92" cy="-162" rx="91.9604" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="92" y="-157.8">IntentBot.SoftRouter</text>
+</g>
+<!-- IntentBot.SoftRouter&#45;&gt;IntentBot.HttpProxy -->
+<g class="edge" id="edge4"><title>IntentBot.SoftRouter-&gt;IntentBot.HttpProxy</title>
+<path fill="none" stroke="black" d="M 144.751 -147.17 C 188.501 -135.7 250.785 -119.371 296.931 -107.273" />
+<polygon fill="black" stroke="black" points="298.028,-110.603 306.814,-104.682 296.253,-103.832 298.028,-110.603" />
+</g>
+<!-- IntentBot.SoftRouter&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge6"><title>IntentBot.SoftRouter-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 115.384 -144.432 C 146.643 -123.298 204.562 -87.6208 260 -72 C 399.878 -32.5866 825.459 -22.4563 1016.91 -19.8735" />
+<polygon fill="black" stroke="black" points="1017.01,-23.3727 1026.96,-19.742 1016.91,-16.3733 1017.01,-23.3727" />
+</g>
+<!-- IntentBot.ConfigRouter -->
+<g class="node" id="node7"><title>IntentBot.ConfigRouter</title>
+<ellipse fill="none" stroke="black" cx="451" cy="-234" rx="103.053" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="451" y="-229.8">IntentBot.ConfigRouter</text>
+</g>
+<!-- IntentBot.ConfigRouter&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge8"><title>IntentBot.ConfigRouter-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 481.355 -216.738 C 495.96 -207.606 512.706 -195.022 524 -180 C 554.668 -139.209 522.692 -103.3 563 -72 C 598.106 -44.74 871.072 -29.1428 1018.41 -22.6303" />
+<polygon fill="black" stroke="black" points="1018.95,-26.1098 1028.79,-22.1771 1018.65,-19.1165 1018.95,-26.1098" />
+</g>
+<!-- IntentBot.DefaultCommandProcessor -->
+<g class="node" id="node10"><title>IntentBot.DefaultCommandProcessor</title>
+<ellipse fill="none" stroke="black" cx="359" cy="-162" rx="156.49" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="359" y="-157.8">IntentBot.DefaultCommandProcessor</text>
+</g>
+<!-- IntentBot.ConfigRouter&#45;&gt;IntentBot.DefaultCommandProcessor -->
+<g class="edge" id="edge10"><title>IntentBot.ConfigRouter-&gt;IntentBot.DefaultCommandProcessor</title>
+<path fill="none" stroke="black" d="M 428.729 -216.055 C 416.951 -207.093 402.314 -195.957 389.497 -186.204" />
+<polygon fill="black" stroke="black" points="391.462,-183.301 381.384,-180.032 387.223,-188.872 391.462,-183.301" />
+</g>
+<!-- IntentBot.DefaultCommandProcessor&#45;&gt;IntentBot.HttpProxy -->
+<g class="edge" id="edge24"><title>IntentBot.DefaultCommandProcessor-&gt;IntentBot.HttpProxy</title>
+<path fill="none" stroke="black" d="M 359 -143.697 C 359 -135.983 359 -126.712 359 -118.112" />
+<polygon fill="black" stroke="black" points="362.5,-118.104 359,-108.104 355.5,-118.104 362.5,-118.104" />
+</g>
+<!-- IntentBot.DefaultCommandProcessor&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge22"><title>IntentBot.DefaultCommandProcessor-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 390.218 -144.354 C 437.506 -119.196 522.614 -74.1668 530 -72 C 619.103 -45.8609 878.333 -30.0054 1018.85 -23.0912" />
+<polygon fill="black" stroke="black" points="1019.35,-26.5709 1029.17,-22.5889 1019.01,-19.5792 1019.35,-26.5709" />
+</g>
+<!-- IntentBot.FakeRouter -->
+<g class="node" id="node11"><title>IntentBot.FakeRouter</title>
+<ellipse fill="none" stroke="black" cx="667" cy="-90" rx="94.4722" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="667" y="-85.8">IntentBot.FakeRouter</text>
+</g>
+<!-- IntentBot.FakeRouter&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge12"><title>IntentBot.FakeRouter-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 736.076 -77.6309 C 747.731 -75.735 759.708 -73.8004 771 -72 C 861.649 -57.5468 965.937 -41.4095 1035.07 -30.7811" />
+<polygon fill="black" stroke="black" points="1035.65,-34.2321 1045.01,-29.2538 1034.59,-27.3133 1035.65,-34.2321" />
+</g>
+<!-- IntentBot.FakeIntentProvider -->
+<g class="node" id="node13"><title>IntentBot.FakeIntentProvider</title>
+<ellipse fill="none" stroke="black" cx="1112" cy="-162" rx="124.218" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="1112" y="-157.8">IntentBot.FakeIntentProvider</text>
+</g>
+<!-- IntentBot.FakeIntentProvider&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge14"><title>IntentBot.FakeIntentProvider-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 1112 -143.871 C 1112 -119.67 1112 -75.2108 1112 -46.3932" />
+<polygon fill="black" stroke="black" points="1115.5,-46.1892 1112,-36.1893 1108.5,-46.1893 1115.5,-46.1892" />
+</g>
+<!-- IntentBot.IntentBuilder -->
+<g class="node" id="node16"><title>IntentBot.IntentBuilder</title>
+<ellipse fill="none" stroke="black" cx="1590" cy="-90" rx="101.131" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="1590" y="-85.8">IntentBot.IntentBuilder</text>
+</g>
+<!-- IntentBot.FakeIntentProvider&#45;&gt;IntentBot.IntentBuilder -->
+<g class="edge" id="edge16"><title>IntentBot.FakeIntentProvider-&gt;IntentBot.IntentBuilder</title>
+<path fill="none" stroke="black" d="M 1197.31 -148.891 C 1271.71 -138.279 1382.53 -122.353 1479 -108 C 1487.85 -106.683 1497.1 -105.292 1506.31 -103.896" />
+<polygon fill="black" stroke="black" points="1506.91,-107.344 1516.27,-102.382 1505.86,-100.424 1506.91,-107.344" />
+</g>
+<!-- IntentBot.IntentEntityValuesBuilder -->
+<g class="node" id="node18"><title>IntentBot.IntentEntityValuesBuilder</title>
+<ellipse fill="none" stroke="black" cx="932" cy="-90" rx="151.261" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="932" y="-85.8">IntentBot.IntentEntityValuesBuilder</text>
+</g>
+<!-- IntentBot.FakeIntentProvider&#45;&gt;IntentBot.IntentEntityValuesBuilder -->
+<g class="edge" id="edge18"><title>IntentBot.FakeIntentProvider-&gt;IntentBot.IntentEntityValuesBuilder</title>
+<path fill="none" stroke="black" d="M 1070.7 -144.941 C 1044.8 -134.867 1011.19 -121.797 983.547 -111.046" />
+<polygon fill="black" stroke="black" points="984.628,-107.711 974.04,-107.349 982.091,-114.235 984.628,-107.711" />
+</g>
+<!-- IntentBot.IntentBuilder&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge38"><title>IntentBot.IntentBuilder-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 1516.27 -77.6184 C 1503.84 -75.724 1491.05 -73.7931 1479 -72 C 1379.72 -57.229 1265.24 -40.7907 1190.9 -30.1951" />
+<polygon fill="black" stroke="black" points="1191.07,-26.685 1180.68,-28.7396 1190.09,-33.615 1191.07,-26.685" />
+</g>
+<!-- IntentBot.IntentEntityValuesBuilder&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge36"><title>IntentBot.IntentEntityValuesBuilder-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 974.202 -72.5881 C 1000.97 -62.1775 1035.69 -48.6759 1063.58 -37.8298" />
+<polygon fill="black" stroke="black" points="1065.09,-41.0001 1073.14,-34.1135 1062.55,-34.476 1065.09,-41.0001" />
+</g>
+<!-- IntentBot.FakeCommandProcessor -->
+<g class="node" id="node19"><title>IntentBot.FakeCommandProcessor</title>
+<ellipse fill="none" stroke="black" cx="1324" cy="-90" rx="146.213" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="1324" y="-85.8">IntentBot.FakeCommandProcessor</text>
+</g>
+<!-- IntentBot.FakeCommandProcessor&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge20"><title>IntentBot.FakeCommandProcessor-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 1275.36 -72.9406 C 1242.65 -62.1397 1199.51 -47.8952 1165.78 -36.7566" />
+<polygon fill="black" stroke="black" points="1166.67,-33.3671 1156.08,-33.5552 1164.48,-40.0142 1166.67,-33.3671" />
+</g>
+<!-- IntentBot.UserIntentBuilder -->
+<g class="node" id="node23"><title>IntentBot.UserIntentBuilder</title>
+<ellipse fill="none" stroke="black" cx="1565" cy="-162" rx="119.473" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="1565" y="-157.8">IntentBot.UserIntentBuilder</text>
+</g>
+<!-- IntentBot.UserIntentBuilder&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge26"><title>IntentBot.UserIntentBuilder-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 1451.34 -156.332 C 1351.26 -150.344 1214.56 -137.017 1169 -108 C 1146.12 -93.4305 1130.66 -66.0146 1121.68 -45.4444" />
+<polygon fill="black" stroke="black" points="1124.83,-43.8982 1117.79,-35.9825 1118.35,-46.562 1124.83,-43.8982" />
+</g>
+<!-- IntentBot.UserIntentBuilder&#45;&gt;IntentBot.IntentBuilder -->
+<g class="edge" id="edge28"><title>IntentBot.UserIntentBuilder-&gt;IntentBot.IntentBuilder</title>
+<path fill="none" stroke="black" d="M 1571.18 -143.697 C 1574 -135.813 1577.39 -126.304 1580.52 -117.546" />
+<polygon fill="black" stroke="black" points="1583.82,-118.699 1583.89,-108.104 1577.23,-116.345 1583.82,-118.699" />
+</g>
+<!-- IntentBot.UserBuilder -->
+<g class="node" id="node27"><title>IntentBot.UserBuilder</title>
+<ellipse fill="none" stroke="black" cx="1807" cy="-90" rx="97.1851" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="1807" y="-85.8">IntentBot.UserBuilder</text>
+</g>
+<!-- IntentBot.UserIntentBuilder&#45;&gt;IntentBot.UserBuilder -->
+<g class="edge" id="edge30"><title>IntentBot.UserIntentBuilder-&gt;IntentBot.UserBuilder</title>
+<path fill="none" stroke="black" d="M 1617.51 -145.811 C 1655.7 -134.765 1707.46 -119.792 1747.23 -108.287" />
+<polygon fill="black" stroke="black" points="1748.44,-111.583 1757.07,-105.442 1746.49,-104.858 1748.44,-111.583" />
+</g>
+<!-- IntentBot.UserBuilder&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge32"><title>IntentBot.UserBuilder-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 1737.74 -77.295 C 1725.2 -75.3757 1712.23 -73.5205 1700 -72 C 1524.25 -50.1438 1317.88 -33.6469 1202.29 -25.2315" />
+<polygon fill="black" stroke="black" points="1202.3,-21.7232 1192.07,-24.4917 1201.79,-28.705 1202.3,-21.7232" />
+</g>
+<!-- IntentBot.RouteCollectionBuilder -->
+<g class="node" id="node29"><title>IntentBot.RouteCollectionBuilder</title>
+<ellipse fill="none" stroke="black" cx="2064" cy="-90" rx="142.294" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="2064" y="-85.8">IntentBot.RouteCollectionBuilder</text>
+</g>
+<!-- IntentBot.RouteCollectionBuilder&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge34"><title>IntentBot.RouteCollectionBuilder-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 1964.16 -77.1033 C 1947.11 -75.2592 1929.55 -73.4787 1913 -72 C 1656.53 -49.0906 1353.05 -31.6436 1203.99 -23.7069" />
+<polygon fill="black" stroke="black" points="1204.14,-20.2097 1193.97,-23.1749 1203.77,-27.1999 1204.14,-20.2097" />
+</g>
+<!-- IntentBot.UserRequestBuilder -->
+<g class="node" id="node33"><title>IntentBot.UserRequestBuilder</title>
+<ellipse fill="none" stroke="black" cx="1831" cy="-162" rx="128.35" ry="18" />
+<text font-family="Times,serif" font-size="14px" text-anchor="middle" x="1831" y="-157.8">IntentBot.UserRequestBuilder</text>
+</g>
+<!-- IntentBot.UserRequestBuilder&#45;&gt;IntentBot.Common -->
+<g class="edge" id="edge40"><title>IntentBot.UserRequestBuilder-&gt;IntentBot.Common</title>
+<path fill="none" stroke="black" d="M 1958.91 -160.773 C 2057.38 -157.552 2182.06 -145.799 2215 -108 C 2225.51 -95.9376 2226.04 -83.582 2215 -72 C 2180.49 -35.7944 1469.11 -23.3961 1207.47 -20.051" />
+<polygon fill="black" stroke="black" points="1207.27,-16.5483 1197.23,-19.9218 1207.18,-23.5478 1207.27,-16.5483" />
+</g>
+<!-- IntentBot.UserRequestBuilder&#45;&gt;IntentBot.IntentBuilder -->
+<g class="edge" id="edge42"><title>IntentBot.UserRequestBuilder-&gt;IntentBot.IntentBuilder</title>
+<path fill="none" stroke="black" d="M 1777.81 -145.552 C 1740.12 -134.602 1689.48 -119.894 1650.28 -108.509" />
+<polygon fill="black" stroke="black" points="1651.16,-105.119 1640.58,-105.69 1649.2,-111.841 1651.16,-105.119" />
+</g>
+<!-- IntentBot.UserRequestBuilder&#45;&gt;IntentBot.UserBuilder -->
+<g class="edge" id="edge44"><title>IntentBot.UserRequestBuilder-&gt;IntentBot.UserBuilder</title>
+<path fill="none" stroke="black" d="M 1825.07 -143.697 C 1822.39 -135.898 1819.17 -126.509 1816.2 -117.829" />
+<polygon fill="black" stroke="black" points="1819.42,-116.429 1812.86,-108.104 1812.8,-118.699 1819.42,-116.429" />
+</g>
+</g>
+</svg>
