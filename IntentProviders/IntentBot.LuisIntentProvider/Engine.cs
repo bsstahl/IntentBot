@@ -55,9 +55,10 @@ namespace IntentBot.LuisIntentProvider
                     foreach (var v in luisEntity.resolution.values)
                         values.Add(new IntentEntityValue()
                         {
-                            ValueType = v.type,
-                            Value = v.value,
-                            Pattern = v.timex
+                            // TODO: Put the real values for ValueType and Pattern back
+                            ValueType = "unknown",
+                            Value = v,
+                            Pattern = ""
                         });
                     intentBuilder.AddEntity(luisEntity.entity, luisEntity.type, values);
                 }

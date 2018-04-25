@@ -41,15 +41,15 @@ namespace IntentBot.LuisIntentProvider
 
     internal class Resolution
     {
-        public Value[] values { get; set; }
+        public string[] values { get; set; }
     }
 
-    internal class Value
-    {
-        public string timex { get; set; }
-        public string type { get; set; }
-        public string value { get; set; }
-    }
+    //internal class Value
+    //{
+    //    public string timex { get; set; }
+    //    public string type { get; set; }
+    //    public string value { get; set; }
+    //}
 }
 
 
