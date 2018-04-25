@@ -18,7 +18,7 @@ namespace IntentBot.HttpProxy.IntegrationTest
         {
             var target = new Client();
             var actual = await target.GetAsync(_baseGoogleUrl, null);
-            var resultText = await actual.Content.ReadAsStringAsync();
+            var resultText = actual.Content;
             Console.WriteLine(resultText);
             Assert.True(actual.IsSuccessStatusCode);
         }
@@ -29,7 +29,7 @@ namespace IntentBot.HttpProxy.IntegrationTest
             var target = new Client();
             var headers = new List<KeyValuePair<string, string>>();
             var actual = await target.GetAsync(_baseGoogleUrl, headers);
-            var resultText = await actual.Content.ReadAsStringAsync();
+            var resultText = actual.Content;
             Console.WriteLine(resultText);
             Assert.True(actual.IsSuccessStatusCode);
         }
@@ -44,7 +44,7 @@ namespace IntentBot.HttpProxy.IntegrationTest
             headers.Add(new KeyValuePair<string, string>("Accept", $"text/html,application/{expected}"));
             var actual = await target.GetAsync($"{_baseHttpBinUrl}/headers", headers);
 
-            var resultText = await actual.Content.ReadAsStringAsync();
+            var resultText = actual.Content;
             Console.WriteLine(resultText);
 
             Assert.Contains(expected, resultText);
@@ -64,7 +64,7 @@ namespace IntentBot.HttpProxy.IntegrationTest
             headers.Add(new KeyValuePair<string, string>("X-Correlation-ID", expectedCorrelationId));
             var actual = await target.GetAsync($"{_baseHttpBinUrl}/headers", headers);
 
-            var resultText = await actual.Content.ReadAsStringAsync();
+            var resultText = actual.Content;
             Console.WriteLine(resultText);
 
             Assert.Contains(expectedAcceptHeader, resultText);

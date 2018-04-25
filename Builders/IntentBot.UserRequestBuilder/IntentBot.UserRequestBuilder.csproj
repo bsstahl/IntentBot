@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IntentBot.Common" Version="1.6.0" />
+    <PackageReference Include="IntentBot.Common" Version="1.7.1" />
     <PackageReference Include="IntentBot.IntentBuilder" Version="1.3.0" />
     <PackageReference Include="IntentBot.UserBuilder" Version="1.0.0" />
   </ItemGroup>

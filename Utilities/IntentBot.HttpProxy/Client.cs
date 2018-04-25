@@ -17,16 +17,17 @@ namespace IntentBot.HttpProxy
         /// <param name="uri">The address of the service to post to</param>
         /// <param name="headers">A collection of name/value pairs to be added to the request as headers</param>
         /// <returns>A Task containing an HttpResponseMessage that holds the result of the post operation</returns>
-        public async Task<HttpResponseMessage> GetAsync(string uri, IEnumerable<KeyValuePair<string, string>> headers)
+        public async Task<IHttpResponseMessage> GetAsync(string uri, IEnumerable<KeyValuePair<string, string>> headers)
         {
             var client = new HttpClient();
             client.AddHeaders(headers);
 
             Console.WriteLine($"Issuing an HTTP Get to '{uri}'.");
             var response = await client.GetAsync(uri);
-            Console.WriteLine($"Response returned from HTTP Post request");
+            var responseText = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Response returned from HTTP Get request: {responseText}");
 
-            return response;
+            return response.AsIHttpResponseMessage();
         }
 
         /// <summary>
@@ -35,10 +36,11 @@ namespace IntentBot.HttpProxy
         /// <param name="uri">The address of the service to post to</param>
         /// <param name="requestContent">The content to be posted</param>
         /// <returns>A Task containing an HttpResponseMessage that holds the result of the post operation</returns>
-        public async Task<HttpResponseMessage> PostAsync(string uri, HttpContent requestContent)
+        public async Task<IHttpResponseMessage> PostAsync(string uri, IHttpContent requestContent)
         {
             var client = new HttpClient();
-            return await client.PostAsync(uri, requestContent);
+            var response = await client.PostAsync(uri, requestContent.AsHttpContent());
+            return response.AsIHttpResponseMessage();
         }
 
     }

@@ -63,9 +63,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.HttpProxy.Integra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserBuilder", "UserBuilder", "{03E417DA-D8F7-4DFE-BF99-C3695AD792A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntentBot.UserBuilder", "Builders\IntentBot.UserBuilder\IntentBot.UserBuilder.csproj", "{F4758A2C-7773-4F81-98CC-4BBEDADBD87B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.UserBuilder", "Builders\IntentBot.UserBuilder\IntentBot.UserBuilder.csproj", "{F4758A2C-7773-4F81-98CC-4BBEDADBD87B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntentBot.UserBuilder.Test", "Builders\IntentBot.UserBuilder.Test\IntentBot.UserBuilder.Test.csproj", "{CF4F1BE0-EDDA-4E05-B643-FC3E4FB39824}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.UserBuilder.Test", "Builders\IntentBot.UserBuilder.Test\IntentBot.UserBuilder.Test.csproj", "{CF4F1BE0-EDDA-4E05-B643-FC3E4FB39824}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.ConfigRouter", "IntentRouters\IntentBot.ConfigRouter\IntentBot.ConfigRouter.csproj", "{0A8D923B-32CE-41F2-AEB9-01286A8A04AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.ConfigRouter.Test", "IntentRouters\IntentBot.ConfigRouter.Test\IntentBot.ConfigRouter.Test.csproj", "{C110C2BD-1B5B-41F5-9E88-89168AD21D47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +165,14 @@ Global
 		{CF4F1BE0-EDDA-4E05-B643-FC3E4FB39824}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF4F1BE0-EDDA-4E05-B643-FC3E4FB39824}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4F1BE0-EDDA-4E05-B643-FC3E4FB39824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8D923B-32CE-41F2-AEB9-01286A8A04AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8D923B-32CE-41F2-AEB9-01286A8A04AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8D923B-32CE-41F2-AEB9-01286A8A04AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8D923B-32CE-41F2-AEB9-01286A8A04AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C110C2BD-1B5B-41F5-9E88-89168AD21D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C110C2BD-1B5B-41F5-9E88-89168AD21D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C110C2BD-1B5B-41F5-9E88-89168AD21D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C110C2BD-1B5B-41F5-9E88-89168AD21D47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -192,6 +204,8 @@ Global
 		{03E417DA-D8F7-4DFE-BF99-C3695AD792A4} = {18F9854F-2EAE-4737-A2F8-F768414CD2D8}
 		{F4758A2C-7773-4F81-98CC-4BBEDADBD87B} = {03E417DA-D8F7-4DFE-BF99-C3695AD792A4}
 		{CF4F1BE0-EDDA-4E05-B643-FC3E4FB39824} = {03E417DA-D8F7-4DFE-BF99-C3695AD792A4}
+		{0A8D923B-32CE-41F2-AEB9-01286A8A04AD} = {5B136A27-45BB-41DF-8824-0BDF8722F583}
+		{C110C2BD-1B5B-41F5-9E88-89168AD21D47} = {5B136A27-45BB-41DF-8824-0BDF8722F583}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9498213D-56A8-4B38-8D52-1BCC31A79966}

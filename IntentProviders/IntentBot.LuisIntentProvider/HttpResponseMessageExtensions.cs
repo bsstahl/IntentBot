@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using IntentBot.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -9,11 +10,9 @@ namespace IntentBot.LuisIntentProvider
 {
     public static class HttpResponseMessageExtensions
     {
-        internal static LuisResponse AsLuisResponse(this HttpResponseMessage responseMessage)
+        internal static LuisResponse AsLuisResponse(this IHttpResponseMessage responseMessage)
         {
-            var responseContentTask = responseMessage.Content.ReadAsStringAsync();
-            Task.WaitAll(responseContentTask);
-            return JsonConvert.DeserializeObject<LuisResponse>(responseContentTask.Result);
+            return JsonConvert.DeserializeObject<LuisResponse>(responseMessage.Content);
         }
     }
 }

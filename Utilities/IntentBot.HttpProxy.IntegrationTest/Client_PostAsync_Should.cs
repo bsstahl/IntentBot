@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Xunit;
 using TestHelperExtensions;
+using IntentBot.Extensions;
 
 namespace IntentBot.HttpProxy.IntegrationTest
 {
@@ -17,9 +18,9 @@ namespace IntentBot.HttpProxy.IntegrationTest
         {
             var target = new Client();
             string expected = string.Empty.GetRandom();
-            var postData = expected.AsHttpContent();
+            var postData = expected.AsIHttpContent("application/json");
             var actual = await target.PostAsync($"{_baseHttpBinUrl}/post", postData);
-            var resultText = await actual.Content.ReadAsStringAsync();
+            var resultText = actual.Content;
             Console.WriteLine(resultText);
             Assert.True(actual.IsSuccessStatusCode);
         }
@@ -29,9 +30,9 @@ namespace IntentBot.HttpProxy.IntegrationTest
         {
             var target = new Client();
             string expected = string.Empty.GetRandom();
-            var postData = expected.AsHttpContent();
+            var postData = expected.AsIHttpContent("application/json");
             var actual = await target.PostAsync($"{_baseHttpBinUrl}/post", postData);
-            var resultText = await actual.Content.ReadAsStringAsync();
+            var resultText = actual.Content;
             Console.WriteLine(resultText);
             Assert.Contains(expected, resultText);
         }

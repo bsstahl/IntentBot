@@ -2,7 +2,7 @@ digraph IntentBot {
 
   "IntentBot.HttpProxy" -> "IntentBot.Common"
 
-  "IntentBot.SoftRouter" -> "IntentBot.HttpProxy"
+  "IntentBot.SoftRouter" -> "IntentBot.DefaultCommandProcessor"
   "IntentBot.SoftRouter" -> "IntentBot.Common"
   
   "IntentBot.ConfigRouter" -> "IntentBot.Common"
@@ -13,6 +13,11 @@ digraph IntentBot {
   "IntentBot.FakeIntentProvider" -> "IntentBot.Common"
   "IntentBot.FakeIntentProvider" -> "IntentBot.IntentBuilder"
   "IntentBot.FakeIntentProvider" -> "IntentBot.IntentEntityValuesBuilder"
+  
+  "IntentBot.LuisIntentProvider" -> "IntentBot.Common"
+  "IntentBot.LuisIntentProvider" -> "IntentBot.HttpProxy"
+  "IntentBot.LuisIntentProvider" -> "IntentBot.IntentBuilder"
+  "IntentBot.LuisIntentProvider" -> "IntentBot.IntentEntitiesValueBuilder"
   
   "IntentBot.FakeCommandProcessor" -> "IntentBot.Common"
   

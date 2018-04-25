@@ -3,7 +3,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using IntentBot.Entities;
 using IntentBot.Interfaces;
+using IntentBot.Extensions;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace IntentBot.DefaultCommandProcessor
 {
@@ -33,15 +35,16 @@ namespace IntentBot.DefaultCommandProcessor
         {
             var restProxy = _serviceProvider.GetService<IHttpProxy>();
 
-            var requestContent = request.AsHttpContent();
+            var jsonData = JsonConvert.SerializeObject(request);
+            var requestContent = jsonData.AsIHttpContent("application/json");
             Console.WriteLine($"Issuing call to Command Processor '{uri}'");
-            HttpResponseMessage response = await restProxy.PostAsync(uri, requestContent);
+            var response = await restProxy.PostAsync(uri, requestContent);
             if (response.IsSuccessStatusCode)
                 Console.WriteLine("Response returned successfully from Command Processor");
             else
                 throw new Exceptions.DataSourceException("Request to Command Processor failed", null); // TODO: Add data to exception
 
-            return await response.AsCommandResponse();
+            return response.AsCommandResponse();
         }
 
     }

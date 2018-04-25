@@ -16,15 +16,15 @@ namespace IntentBot.Interfaces
         /// </summary>
         /// <param name="uri">The address of the service to post to</param>
         /// <param name="headers">A collection of name/value pairs to be added to the request as headers</param>
-        /// <returns>A Task of type HttpResponseMessage that holds the result of the post operation</returns>
-        Task<HttpResponseMessage> GetAsync(string uri, IEnumerable<KeyValuePair<string, string>> headers);
+        /// <returns>A Task of type IHttpResponseMessage that holds the result of the post operation</returns>
+        Task<IHttpResponseMessage> GetAsync(string uri, IEnumerable<KeyValuePair<string, string>> headers);
 
         /// <summary>
         /// Issues an HTTP Post of the content to the specified URI
         /// </summary>
         /// <param name="uri">The address of the service to post to</param>
         /// <param name="requestContent">The content to be posted</param>
-        /// <returns>A Task of type HttpResponseMessage that holds the result of the post operation</returns>
-        Task<HttpResponseMessage> PostAsync(string uri, HttpContent requestContent);
+        /// <returns>A Task of type IHttpResponseMessage that holds the result of the post operation</returns>
+        Task<IHttpResponseMessage> PostAsync(string uri, IHttpContent requestContent);
     }
 }
