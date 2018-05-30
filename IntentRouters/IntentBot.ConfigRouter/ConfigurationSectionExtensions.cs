@@ -17,7 +17,11 @@ namespace IntentBot.ConfigRouter
             foreach (var c in dict)
             {
                 var item = c.First() as JProperty;
-                results.Add(new IntentRoute() { IntentName = item.Name, Uri = item.Value.ToString() });
+                results.Add(new IntentRoute()
+                {
+                    IntentName = item.Name,
+                    Uri = item.Value.ToString()
+                });
             }
             return results;
         }

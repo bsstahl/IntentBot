@@ -12,10 +12,12 @@ namespace IntentBot.HttpProxy
     public static class HttpClientExtensions
     {
         /// <summary>
-        /// 
+        /// Converts from a System.Net.HttpResponseMessage to an object that
+        /// implements the IHttpResponseMessage interface
         /// </summary>
-        /// <param name="responseMessage"></param>
-        /// <returns></returns>
+        /// <param name="responseMessage">The message received from the http request</param>
+        /// <returns>An instance of an IHttpResponseMessage containing
+        /// the data from the request</returns>
         public static IHttpResponseMessage AsIHttpResponseMessage(this System.Net.Http.HttpResponseMessage responseMessage)
         {
             var contentTask = responseMessage.Content.ReadAsStringAsync();
@@ -38,7 +40,7 @@ namespace IntentBot.HttpProxy
                 Content = contentTask.Result,
                 IsSuccessStatusCode = responseMessage.IsSuccessStatusCode,
                 ReasonPhrase = responseMessage.ReasonPhrase,
-                RequestMessage = (requestContentTask == null) ? string.Empty: requestContentTask.Result,
+                RequestMessage = (requestContentTask == null) ? string.Empty : requestContentTask.Result,
                 StatusCode = Convert.ToInt32(responseMessage.StatusCode),
                 Version = version,
                 Headers = headers
@@ -54,7 +56,11 @@ namespace IntentBot.HttpProxy
         {
             var result = new System.Net.Http.StringContent(content.Content);
             foreach (var header in content.Headers)
+            {
+                if (result.Headers.Contains(header.Key))
+                    result.Headers.Remove(header.Key);
                 result.Headers.Add(header.Key, header.Value);
+            }
             return result;
         }
 

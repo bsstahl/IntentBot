@@ -11,6 +11,8 @@
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
     <PackageReference Include="IntentBot.Common" Version="1.7.2" />
     <PackageReference Include="IntentBot.RouteCollectionBuilder" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.2" />
@@ -23,7 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IntentBot.SoftRouter\IntentBot.SoftRouter.csproj" />
+    <ProjectReference Include="..\IntentBot.DataServiceRouter\IntentBot.DataServiceRouter.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="noDefaultRoute.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="routes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

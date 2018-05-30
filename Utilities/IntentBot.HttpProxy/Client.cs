@@ -39,8 +39,16 @@ namespace IntentBot.HttpProxy
         public async Task<IHttpResponseMessage> PostAsync(string uri, IHttpContent requestContent)
         {
             var client = new HttpClient();
-            var response = await client.PostAsync(uri, requestContent.AsHttpContent());
-            return response.AsIHttpResponseMessage();
+            var sendContent = requestContent.AsHttpContent();
+
+            Console.WriteLine($"Issuing an HTTP Post to '{uri}' with data '{requestContent.Content}'.");
+            var response = await client.PostAsync(uri, sendContent);
+            Console.WriteLine("Response received from HTTP Post request -- needs to be deserialized");
+
+            var receivedMessage = response.AsIHttpResponseMessage();
+            Console.WriteLine($"Deserialized response from HTTP Post request: {receivedMessage.Content}");
+
+            return receivedMessage;
         }
 
     }

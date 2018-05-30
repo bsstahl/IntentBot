@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IntentBot.Common" Version="1.7.1" />
+    <PackageReference Include="IntentBot.Common" Version="1.7.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.2" />
     <PackageReference Include="TestHelperExtensions" Version="1.2.0" />
     <PackageReference Include="xunit" Version="2.3.1" />

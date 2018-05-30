@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.ConfigRouter", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.ConfigRouter.Test", "IntentBot.ConfigRouter.Test\IntentBot.ConfigRouter.Test.csproj", "{57F9EAE8-C7B9-4D20-BD97-95144B0C4CDA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.DataServiceRouter", "IntentBot.DataServiceRouter\IntentBot.DataServiceRouter.csproj", "{B350A202-30F5-4BE1-B611-D9FD3EA2416A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntentBot.DataServiceRouter.Test", "IntentBot.DataServiceRouter.Test\IntentBot.DataServiceRouter.Test.csproj", "{457917AF-BDDD-40D1-A655-D68402639D7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{57F9EAE8-C7B9-4D20-BD97-95144B0C4CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57F9EAE8-C7B9-4D20-BD97-95144B0C4CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57F9EAE8-C7B9-4D20-BD97-95144B0C4CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B350A202-30F5-4BE1-B611-D9FD3EA2416A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B350A202-30F5-4BE1-B611-D9FD3EA2416A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B350A202-30F5-4BE1-B611-D9FD3EA2416A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B350A202-30F5-4BE1-B611-D9FD3EA2416A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457917AF-BDDD-40D1-A655-D68402639D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457917AF-BDDD-40D1-A655-D68402639D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457917AF-BDDD-40D1-A655-D68402639D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457917AF-BDDD-40D1-A655-D68402639D7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,13 +16,18 @@ namespace IntentBot.Extensions
         /// with the specified request content and media-type header
         /// </summary>
         /// <param name="request">json formatted request data</param>
-        /// <param name="mediaTypeHeader">The media-type content header to be supplied with the content</param>
+        /// <param name="mediaTypeHeaderValue">The value of the media type http header</param>
+        /// <param name="contentTypeHeaderValue">The value of the content type http header</param>
         /// <returns>An object implementing the IHttpContent interface</returns>
-        public static IHttpContent AsIHttpContent(this string request, string mediaTypeHeader)
+        public static IHttpContent AsIHttpContent(this string request, string mediaTypeHeaderValue = "", string contentTypeHeaderValue = "")
         {
             var result = new HttpContent(request);
-            result.AddHeader("media-type", mediaTypeHeader);
+            if (!string.IsNullOrWhiteSpace(mediaTypeHeaderValue))
+                result.AddHeader("media-type", mediaTypeHeaderValue);
+            if (!string.IsNullOrWhiteSpace(contentTypeHeaderValue))
+                result.AddHeader("content-type", contentTypeHeaderValue);
             return result;
         }
+
     }
 }
