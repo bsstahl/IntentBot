@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IntentBot.Common" Version="1.7.1" />
+    <PackageReference Include="IntentBot.Common" Version="1.7.2" />
   </ItemGroup>
 
 </Project>
